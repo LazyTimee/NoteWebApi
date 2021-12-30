@@ -397,4 +397,4 @@ FodyWeavers.xsd
 # JetBrains Rider
 *.sln.iml
 
-Notes.Backend/.vs/
+Notes.Backend/.vs
