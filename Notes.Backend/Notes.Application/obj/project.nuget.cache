@@ -1,11 +1,12 @@
 {
   "version": 2,
-  "dgSpecHash": "XiLQMaSOy5Ie9dFA7ZTrK7kTDuisj2pTvqxnI7XApaGJVFcQ0SChXs18lcMPZMLEtOpIRida1hnL+aeeeKl2lA==",
+  "dgSpecHash": "UEp4z7lrbJrcBTzc1ooTShyL92k08JZ6+RTpbnUai1x2UgdGsehcwFyvqmGr3td3ByWb4+ngbaZ1MU8oKLTUjw==",
   "success": true,
   "projectFilePath": "C:\\Az\\App\\NoteWebApi\\Notes.Backend\\Notes.Application\\Notes.Application.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\a123q\\.nuget\\packages\\automapper\\10.1.1\\automapper.10.1.1.nupkg.sha512",
     "C:\\Users\\a123q\\.nuget\\packages\\mediatr\\9.0.0\\mediatr.9.0.0.nupkg.sha512",
+    "C:\\Users\\a123q\\.nuget\\packages\\mediatr.extensions.microsoft.dependencyinjection\\9.0.0\\mediatr.extensions.microsoft.dependencyinjection.9.0.0.nupkg.sha512",
     "C:\\Users\\a123q\\.nuget\\packages\\microsoft.csharp\\4.7.0\\microsoft.csharp.4.7.0.nupkg.sha512",
     "C:\\Users\\a123q\\.nuget\\packages\\microsoft.entityframeworkcore\\5.0.13\\microsoft.entityframeworkcore.5.0.13.nupkg.sha512",
     "C:\\Users\\a123q\\.nuget\\packages\\microsoft.entityframeworkcore.abstractions\\5.0.13\\microsoft.entityframeworkcore.abstractions.5.0.13.nupkg.sha512",
