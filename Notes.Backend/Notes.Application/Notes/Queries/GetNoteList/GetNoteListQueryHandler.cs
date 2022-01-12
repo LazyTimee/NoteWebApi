@@ -23,7 +23,7 @@ namespace Notes.Application.Notes.Queries.GetNoteList
         {
             var notesQuery = await _dbContext.Notes
                 .Where(note => note.UserId == request.UserId)
-                .ProjectTo<NoteLookupDto>(_mapper.ConfigurationProvider)
+                .ProjectTo<NoteListElemDto>(_mapper.ConfigurationProvider)
                 .ToListAsync(cancellationToken);
 
             return new NoteListVm { Notes = notesQuery };

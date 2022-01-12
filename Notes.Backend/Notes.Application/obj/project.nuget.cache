@@ -1,10 +1,12 @@
 {
   "version": 2,
-  "dgSpecHash": "UEp4z7lrbJrcBTzc1ooTShyL92k08JZ6+RTpbnUai1x2UgdGsehcwFyvqmGr3td3ByWb4+ngbaZ1MU8oKLTUjw==",
+  "dgSpecHash": "DrGnciMhhAbe4VoquKQCQjGI5pu/zL1i7ZotmDvBJmlK3/ofupvPBZNUxa19jhq8v8M96xhLFNDwj11Jsba0UQ==",
   "success": true,
   "projectFilePath": "C:\\Az\\App\\NoteWebApi\\Notes.Backend\\Notes.Application\\Notes.Application.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\a123q\\.nuget\\packages\\automapper\\10.1.1\\automapper.10.1.1.nupkg.sha512",
+    "C:\\Users\\a123q\\.nuget\\packages\\fluentvalidation\\10.3.6\\fluentvalidation.10.3.6.nupkg.sha512",
+    "C:\\Users\\a123q\\.nuget\\packages\\fluentvalidation.dependencyinjectionextensions\\10.3.6\\fluentvalidation.dependencyinjectionextensions.10.3.6.nupkg.sha512",
     "C:\\Users\\a123q\\.nuget\\packages\\mediatr\\9.0.0\\mediatr.9.0.0.nupkg.sha512",
     "C:\\Users\\a123q\\.nuget\\packages\\mediatr.extensions.microsoft.dependencyinjection\\9.0.0\\mediatr.extensions.microsoft.dependencyinjection.9.0.0.nupkg.sha512",
     "C:\\Users\\a123q\\.nuget\\packages\\microsoft.csharp\\4.7.0\\microsoft.csharp.4.7.0.nupkg.sha512",
