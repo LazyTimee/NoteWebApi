@@ -9,6 +9,8 @@ using Notes.Application.Common.Mappings;
 using Notes.Application.Interfaces;
 using Notes.Persistence;
 using Notes.WebApi.Middleware;
+using System;
+using System.IO;
 using System.Reflection;
 
 namespace Notes.WebApi
@@ -42,6 +44,12 @@ namespace Notes.WebApi
             });
 
             services.AddHttpContextAccessor();
+            services.AddSwaggerGen(config =>
+            {
+                var xmlFile = $"{Assembly.GetExecutingAssembly().GetName().Name}.xml";
+                var xmlPath = Path.Combine(AppContext.BaseDirectory, xmlFile);
+                config.IncludeXmlComments(xmlPath);
+            });
         }
 
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
@@ -51,6 +59,12 @@ namespace Notes.WebApi
                 app.UseDeveloperExceptionPage();
             }
 
+            app.UseSwagger();
+            app.UseSwaggerUI(config =>
+            {
+                config.RoutePrefix = string.Empty;
+                config.SwaggerEndpoint($"/swagger/v1/swagger.json", "Notes API");
+            });
             app.UseCustomExceptionHandler();
             app.UseRouting();
             app.UseHttpsRedirection();
