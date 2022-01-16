@@ -27,7 +27,7 @@ namespace Notes.WebApi
                 }
                 catch (Exception exception)
                 {
-
+                    throw new Exception(exception.Message);
                 }
             }
 

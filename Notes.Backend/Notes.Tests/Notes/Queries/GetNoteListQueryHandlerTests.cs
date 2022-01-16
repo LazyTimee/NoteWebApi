@@ -29,10 +29,7 @@ namespace Notes.Tests.Notes.Queries
 
             // Act
             var result = await handler.Handle(
-                new GetNoteListQuery
-                {
-                    UserId = NotesContextFactory.UserBId
-                },
+                new GetNoteListQuery(),
                 CancellationToken.None);
 
             // Assert

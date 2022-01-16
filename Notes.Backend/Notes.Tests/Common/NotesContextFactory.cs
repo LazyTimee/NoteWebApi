@@ -27,8 +27,7 @@ namespace Notes.Tests.Common
                     Details = "Details1",
                     EditDate = null,
                     Id = Guid.Parse("F6484EDE-14D4-4834-904E-86B7783BDECF"),
-                    Title = "Title1",
-                    UserId = UserAId
+                    Title = "Title1"
                 },
                 new Note
                 {
@@ -36,8 +35,7 @@ namespace Notes.Tests.Common
                     Details = "Details2",
                     EditDate = null,
                     Id = Guid.Parse("0014EDB9-40AE-4CD3-A0D9-22C7A38F3D45"),
-                    Title = "Title2",
-                    UserId = UserBId
+                    Title = "Title2"
                 },
                 new Note
                 {
@@ -45,8 +43,7 @@ namespace Notes.Tests.Common
                     Details = "Details3",
                     EditDate = null,
                     Id = NoteIdForDelete,
-                    Title = "Title3",
-                    UserId = UserAId
+                    Title = "Title3"
                 },
                 new Note
                 {
@@ -54,8 +51,7 @@ namespace Notes.Tests.Common
                     Details = "Details4",
                     EditDate = null,
                     Id = NoteIdForUpdate,
-                    Title = "Title4",
-                    UserId = UserBId
+                    Title = "Title4"
                 }
             );
             context.SaveChanges();

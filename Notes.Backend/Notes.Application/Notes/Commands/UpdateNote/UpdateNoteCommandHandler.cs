@@ -24,7 +24,7 @@ namespace Notes.Application.Notes.Commands.UpdateNote
                 await _dbContext.Notes.FirstOrDefaultAsync(note =>
                     note.Id == request.Id, cancellationToken);
 
-            if (entity == null || entity.UserId != request.UserId)
+            if (entity == null)
             {
                 throw new NotFoundException(nameof(Note), request.Id);
             }

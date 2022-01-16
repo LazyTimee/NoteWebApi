@@ -33,10 +33,7 @@ namespace Notes.WebApi.Controllers
         [ProducesResponseType(StatusCodes.Status200OK)]
         public async Task<ActionResult<NoteListVm>> GetAll()
         {
-            var query = new GetNoteListQuery
-            {
-                UserId = UserId
-            };
+            var query = new GetNoteListQuery();
             var vm = await Mediator.Send(query);
             return Ok(vm);
         }
@@ -57,7 +54,6 @@ namespace Notes.WebApi.Controllers
         {
             var query = new GetNoteDetailsQuery
             {
-                UserId = UserId,
                 Id = id
             };
             var vm = await Mediator.Send(query);
@@ -84,7 +80,6 @@ namespace Notes.WebApi.Controllers
         public async Task<ActionResult<Guid>> Create([FromBody] CreateNoteDto createNoteDto)
         {
             var command = _mapper.Map<CreateNoteCommand>(createNoteDto);
-            command.UserId = UserId;
             var noteId = await Mediator.Send(command);
             return Ok(noteId);
         }
@@ -107,7 +102,6 @@ namespace Notes.WebApi.Controllers
         public async Task<IActionResult> Update([FromBody] UpdateNoteDto updateNoteDto)
         {
             var command = _mapper.Map<UpdateNoteCommand>(updateNoteDto);
-            command.UserId = UserId;
             await Mediator.Send(command);
             return NoContent();
         }
@@ -128,8 +122,7 @@ namespace Notes.WebApi.Controllers
         {
             var command = new DeleteNoteCommand
             {
-                Id = id,
-                UserId = UserId
+                Id = id
             };
             await Mediator.Send(command);
             return NoContent();

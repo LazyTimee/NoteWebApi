@@ -22,7 +22,6 @@ namespace Notes.Application.Notes.Queries.GetNoteList
             CancellationToken cancellationToken)
         {
             var notesQuery = await _dbContext.Notes
-                .Where(note => note.UserId == request.UserId)
                 .ProjectTo<NoteListElemDto>(_mapper.ConfigurationProvider)
                 .ToListAsync(cancellationToken);
 

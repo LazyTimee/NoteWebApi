@@ -22,7 +22,6 @@ namespace Notes.Tests.Notes.Commands
             await handler.Handle(new UpdateNoteCommand
             {
                 Id = NotesContextFactory.NoteIdForUpdate,
-                UserId = NotesContextFactory.UserBId,
                 Title = updatedTitle
             }, CancellationToken.None);
 
@@ -44,30 +43,9 @@ namespace Notes.Tests.Notes.Commands
                 await handler.Handle(
                     new UpdateNoteCommand
                     {
-                        Id = Guid.NewGuid(),
-                        UserId = NotesContextFactory.UserAId
+                        Id = Guid.NewGuid()
                     },
                     CancellationToken.None));
-        }
-
-        [Fact]
-        public async Task UpdateNoteCommandHandler_FailOnWrongUserId()
-        {
-            // Arrange
-            var handler = new UpdateNoteCommandHandler(Context);
-
-            // Act
-            // Assert
-            await Assert.ThrowsAsync<NotFoundException>(async () =>
-            {
-                await handler.Handle(
-                    new UpdateNoteCommand
-                    {
-                        Id = NotesContextFactory.NoteIdForUpdate,
-                        UserId = NotesContextFactory.UserAId
-                    },
-                    CancellationToken.None);
-            });
         }
     }
 }

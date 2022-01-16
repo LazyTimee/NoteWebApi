@@ -8,7 +8,6 @@ namespace Notes.Application.Notes.Commands.DeleteCommand
         public DeleteNoteCommandValidator()
         {
             RuleFor(deleteNoteCommand => deleteNoteCommand.Id).NotEqual(Guid.Empty);
-            RuleFor(deleteNoteCommand => deleteNoteCommand.UserId).NotEqual(Guid.Empty);
         }
     }
 }

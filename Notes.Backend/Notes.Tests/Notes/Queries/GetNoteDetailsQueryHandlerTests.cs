@@ -32,7 +32,6 @@ namespace Notes.Tests.Notes.Queries
             var result = await handler.Handle(
                 new GetNoteDetailsQuery
                 {
-                    UserId = NotesContextFactory.UserBId,
                     Id = Guid.Parse("0014EDB9-40AE-4CD3-A0D9-22C7A38F3D45")
                 },
                 CancellationToken.None);

@@ -25,7 +25,7 @@ namespace Notes.Application.Notes.Queries.GetNoteDetails
                 .FirstOrDefaultAsync(note =>
                 note.Id == request.Id, cancellationToken);
 
-            if (entity == null || entity.UserId != request.UserId)
+            if (entity == null)
             {
                 throw new NotFoundException(nameof(Note), request.Id);
             }

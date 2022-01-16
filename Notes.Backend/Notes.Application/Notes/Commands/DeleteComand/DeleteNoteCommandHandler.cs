@@ -21,7 +21,7 @@ namespace Notes.Application.Notes.Commands.DeleteCommand
             var entity = await _dbContext.Notes
                 .FindAsync(new object[] { request.Id }, cancellationToken);
 
-            if (entity == null || entity.UserId != request.UserId)
+            if (entity == null)
             {
                 throw new NotFoundException(nameof(Note), request.Id);
             }
